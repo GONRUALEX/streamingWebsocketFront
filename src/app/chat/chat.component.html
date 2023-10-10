@@ -1,0 +1,29 @@
+
+  <div class="container row">
+    <div class="col-6">
+      <p class="video-description">local:</p>
+      <video #local_video [autoplay]="true" [muted]="true">
+
+      </video>
+    </div>
+    <div class="col-6">
+      <p class="video-description">remote:</p>
+      <video  #received_video [autoplay]="true" >
+
+      </video>
+    </div>
+    </div>
+
+<button mat-raised-button color="primary" (click)="startLocalVideo()">Start local</button>
+<button mat-raised-button color="primary" (click)="pauseLocalVideo()">Stop local</button>
+<button mat-raised-button color="primary" (click)="call()">Call</button>
+<button mat-raised-button color="primary" (click)="hangUp()">hungup</button>
+<button mat-raised-button color="primary" (click)="requestMediaDevices()">Activaete</button>
+<div class="chat">
+  <div style="width: 20%; float: left;">
+    <app-user [inputMessage]="currentMessage"></app-user>
+  </div>
+  <div style="margin-left: 21%; width: 78%; height: 100%;">
+    <app-chat-stream (outputMessage)="recieveMessage($event)" [inputMessage]="currentMessage"></app-chat-stream>
+  </div>
+</div>

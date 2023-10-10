@@ -1,0 +1,10 @@
+<mat-card>
+  <mat-card-content>
+    <mat-list class="users">
+      <mat-list-item class="user" *ngFor="let user of users" [ngClass]="{'online' : user.online}" [ngClass]="{'offline' : !user.online}">
+        {{user.id}}{{user.userName}}
+        <mat-divider [inset]="true"></mat-divider>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

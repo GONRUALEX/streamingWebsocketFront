@@ -1,0 +1,54 @@
+{
+
+  "/login/*": {
+
+    "target": " https://3277-62-83-101-175.ngrok.io/login",
+
+    "secure": true,
+
+    "logLevel": "debug",
+
+    "changeOrigin": true
+
+  },
+
+
+  "/translate": {
+
+    "target": "http://cognitive-translator.jxa-pre-inter.svc.cluster.local",
+
+    "secure": true,
+
+    "logLevel": "debug",
+
+    "changeOrigin": true
+
+  },
+
+  "/conceptos": {
+
+    "target": "http://custom-entity-recognition-spacy.jxa-pre-inter.svc.cluster.local",
+
+    "secure": true,
+
+    "logLevel": "debug",
+
+    "changeOrigin": true
+
+  },
+
+  "/whisper": {
+
+    "target": "https://c9d9-34-142-201-242.ngrok-free.app",
+
+    "secure": true,
+
+    "logLevel": "debug",
+
+    "changeOrigin": true
+
+  }
+
+
+}
+

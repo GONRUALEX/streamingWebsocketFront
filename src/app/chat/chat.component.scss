@@ -1,0 +1,32 @@
+video{
+  width:300px;
+  background: grey;
+
+}
+
+button{
+  margin:1em;
+}
+
+.container{
+  display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.chat-container{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chat-container .chat-box{
+  margin:4rem;
+  min-width: 50em;
+}
+
+.chat-container .card-body{
+  height: 40em;
+}
+

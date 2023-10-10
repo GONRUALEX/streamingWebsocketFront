@@ -1,0 +1,23 @@
+<div class="chat-stream">
+  <div class="stream-div">
+    <div class="chat-message-wrapper" *ngFor="let message of publishedMessage">
+      <div class="chat-message" [ngStyle]="{'float': (loggedinUserId === message.from) ? 'right' : ''}">
+        <div class="chat-username">{{message.fromUserName}}</div>
+        {{message.message}}
+      </div>
+    </div>
+  </div>
+</div>
+<mat-card>
+  <mat-card-content>
+    <div class="message-form">
+      <div *ngIf="showTypingIndicator" class="typing-indicator">{{typingUser}} is typing...</div>
+      <form (ngSubmit)="sendMessage()">
+        <mat-form-field style="width: 100%">
+          <mat-label>Message</mat-label>
+          <input matInput class="form-control" placeholder="Hello..." autocomplete="off" name="message" [(ngModel)]="messageText" (keypress)="sendTypeIndicator()">
+        </mat-form-field>
+      </form>
+    </div>
+  </mat-card-content>
+</mat-card>
